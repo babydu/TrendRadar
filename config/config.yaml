@@ -1,4 +1,21 @@
 app:
+  version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version"
+  show_version_update: true # 控制显示版本更新提示，如果 false，则不接受新版本提示
+
+crawler:
+  request_interval: 1000 # 请求间隔(毫秒)
+  enable_crawler: true # 是否启用爬取新闻功能，如果 false，则直接停止程序
+  use_proxy: false # 是否启用代理，false 时为关闭
+  default_proxy: "http://127.0.0.1:10086"
+
+# 🔸 daily（当日汇总模式）
+#   • 推送时机：按时推送(默认每小时推送一次)
+#   • 显示内容：当日所有匹配新闻 + 新增新闻区域
+#   • 适用场景：日报总结、全面了解当日热点趋势
+#
+# 🔸 current（当前榜单模式）
+#   • 推送时机：按时推送(默认每小时推送一次)
+#   • 显示内容：当前榜单匹配新闻 + 新增新闻区域
 #   • 适用场景：实时热点追踪、了解当前最火的内容
 #
 # 🔸 incremental（增量监控模式）
@@ -143,20 +160,25 @@ platforms:
   # 备注：以下渠道在测试中抓取失败，已暂时注释
   # 如需使用请检查API接口状态或联系维护团队
   # ======================================================
-  version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version"
-  show_version_update: true # 控制显示版本更新提示，如果 false，则不接受新版本提示
-
-crawler:
-  request_interval: 1000 # 请求间隔(毫秒)
-  enable_crawler: true # 是否启用爬取新闻功能，如果 false，则直接停止程序
-  use_proxy: false # 是否启用代理，false 时为关闭
-  default_proxy: "http://127.0.0.1:10086"
-
-# 🔸 daily（当日汇总模式）
-#   • 推送时机：按时推送(默认每小时推送一次)
-#   • 显示内容：当日所有匹配新闻 + 新增新闻区域
-#   • 适用场景：日报总结、全面了解当日热点趋势
-#
-# 🔸 current（当前榜单模式）
-#   • 推送时机：按时推送(默认每小时推送一次)
-#   • 显示内容：当前榜单匹配新闻 + 新增新闻区域
+  
+  # 失败的综合新闻媒体类
+  # - id: "sina"
+  #   name: "新浪"           # 失败原因：接口可能已变更
+  # - id: "sohu" 
+  #   name: "搜狐"           # 失败原因：接口可能已变更
+  
+  # 失败的财经类
+  # - id: "ghxi"
+  #   name: "国海证券"       # 失败原因：接口可能已变更
+  
+  # 失败的社交/短视频类
+  # - id: "kuaishou"
+  #   name: "快手"           # 失败原因：接口可能已变更
+  # - id: "smzdm"
+  #   name: "什么值得买"     # 失败原因：接口可能已变更
+  
+  # 失败的科技类
+  # - id: "36kr"
+  #   name: "36氪"           # 失败原因：接口可能已变更
+  # - id: "linuxdo"
+  #   name: "LinuxDo"        # 失败原因：接口可能已变更
