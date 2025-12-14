@@ -235,6 +235,14 @@ platforms:
     name: "少数派"
   - id: "producthunt"
     name: "ProductHunt"
+  - id: "36kr-quick"
+    name: "36氪 快讯"
+
+id: "36kr-renqi"
+name: "36氪 人气榜"
+
+id: "freebuf"
+name: "Freebuf 网络安全"
 
   # === 其他/工具类 ===
   - id: "chongbuluo"
